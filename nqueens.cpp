@@ -11,13 +11,12 @@ bool isSafe(vector<vector<int>>& board, int row, int col, int N) {
         if (board[i][j] == 1) {
             return false;
         }
-    }
+    } 
     for (int i = row, j = col; i >= 0 && j < N; i--, j++) {
         if (board[i][j] == 1) {
             return false;
         }
     }
-
     return true;
 }
 void solveNQueens(vector<vector<int>>& board, int row, int N) {
@@ -39,15 +38,12 @@ void solveNQueens(vector<vector<int>>& board, int row, int N) {
         }
     }
 }
-
 int main() {
     int N;
     cout << "Enter the size of the chessboard (N): ";
     cin >> N;
     vector<vector<int>> board(N, vector<int>(N, 0));
-
     cout << "Solutions for " << N << "-Queens problem:" << endl;
     solveNQueens(board, 0, N);
-
     return 0;
 }
